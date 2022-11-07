@@ -1,0 +1,118 @@
+.project {
+  padding: 80px 0;
+  width: 100%;
+  max-width: 1680px;
+  border-bottom: 1px solid #bebebe;
+  margin: 0 auto;
+  @media screen and (max-width: 700px) {
+    max-width: 700px;
+  }
+  &__container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+    @media screen and (max-width: 800px) {
+      margin: 0 5px;
+    }
+    @media screen and (max-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  &__uppertitle {
+    @include upperTitleStyle();
+    @media screen and (max-width: 330px){
+      font-size: 17px;
+    }
+  }
+
+  &__title {
+    @include titleStyle();
+  }
+}
+
+.project-slider {
+  &__container {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__card {
+    width: 320px;
+    border: 1px solid #bebebe;
+  }
+
+  &__image {
+    width: inherit;
+  }
+
+  &__text {
+    padding: 0 21px;
+  }
+
+  &__title {
+    @include FontMed();
+    font-size: 24px;
+    text-align: start;
+    margin: 20px 0;
+    @media screen and (max-width: 330px) {
+    }
+  }
+
+  &__paragraph {
+    @include FontReq();
+    font-size: 16px;
+    line-height: 20px;
+    color: #232323;
+    text-align: start;
+  }
+
+  &__bottom {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    &:nth-child(2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    margin: 0 21px;
+    @include FontReq();
+    font-size: 18px;
+    line-height: 20px;
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0%;
+      border-bottom: 1.5px solid black;
+      transition: 0.4s ease-in-out;
+      bottom: 0;
+      overflow: hidden;
+      opacity: 0;
+      bottom: -3px;
+    }
+    &:hover::before {
+      width: 100%;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  &__arrow {
+    width: 50px;
+    height: 20px;
+  }
+
+  &__link:hover > &__arrow {
+  }
+}

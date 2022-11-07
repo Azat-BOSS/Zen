@@ -1,0 +1,100 @@
+.zone {
+  color: white;
+  padding: 80px 0;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  background-color: #353535;
+  @media screen and (max-width: 700px) {
+    max-width: 700px;
+    padding: 40px 0;
+  }
+  &__container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+    @media screen and (max-width: 800px) {
+      margin: 0 5px;
+    }
+    @media screen and (max-width: 600px) {
+      margin: 0px;
+    }
+  }
+
+  &__upper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+    @include upperTitleStyle();
+    font-size: 24px;
+    @media screen and (max-width: 1370px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 500px) {
+     font-size: 18px;
+    }
+  }
+
+  &__title {
+    @include titleStyle();
+    color: white;
+    font-size: 64px;
+    @media screen and (max-width: 1370px) {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    @media screen and (max-width: 400px) {
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+}
+
+
+.zone-slider {
+  margin-top: 60px;
+  &__container {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__block {
+    width: 350px;
+    height: 325px;
+  }
+
+  &__title {
+    @include FontReq();
+    font-size: 24px;
+    line-height: 0px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 700px) {
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    margin-top: 15px;
+    @include FontReq();
+    font-size: 20px;
+    line-height: 20px;
+    @media screen and (max-width: 700px) {
+      font-size: 16px;
+    }
+  }
+}
+
+

@@ -1,0 +1,65 @@
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__main-text">
+      <p class="contact__uppertitle">Оставьте заявку и мы Вам перезвоним</p>
+      <h2 class="contact__title">Записаться на показ</h2>
+    </div>
+    <form action="" class="contact__form" novalidate>
+      <ul class="contact__list">
+        <li class="contact__block-input">
+          <input
+            pattern="^[a-zA-Zа-яА-Я ]+$" 
+            class="contact__input"
+            type="text"
+            name="name"
+            placeholder="Ваше ФИО"
+            minlength="5"
+            maxlength="60"
+            id="input-name"
+            data-error-message="Можно использовать только буквы" 
+            required
+          />
+          <span class="contact__block-input-error input-name-error"></span>
+        </li>
+        <li class="contact__block-input">
+          <input
+            class="contact__input"
+            type="phone"
+            name="phone"
+            placeholder="Ваш телефон"
+            minlength="3"
+            maxlength="20"
+            id="input-phone"
+            data-error-message="Обязательное поле" 
+            required
+          />
+          <span class="contact__block-input-error input-phone-error"></span>
+        </li>
+        <li class="contact__block-input">
+          <input
+            class="contact__input"
+            type="email"
+            name="email"
+            placeholder="Ваша почта"
+            minlength="5"
+            maxlength="50"
+            id="input-email"
+            data-error-message="Обязательное поле" 
+            required
+          />
+          <span class="contact__block-input-error input-email-error"></span>
+        </li>
+      </ul>
+      <div class="contact__block-bottom">
+        <button class="contact__button" type="submit">Оставить заявку</button>
+        <a href="#" 
+        class="contact__link"
+          >Нажимая на кнопку, Вы даете согласие на обработку своих персональных
+          данных</a
+        >
+      </div>
+    </form>
+  </div>
+  @@include("../modalPrivacy/modalPrivacy.html")
+</section>
+
