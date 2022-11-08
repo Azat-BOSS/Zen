@@ -71,6 +71,13 @@
     text-align: start;
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 221px;
+  }
+
   &__bottom {
     margin: 20px 0;
     display: flex;
@@ -88,23 +95,11 @@
     margin-right: 20px;
     color: black;
     text-decoration: none;
-    position: relative;
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 0%;
-      border-bottom: 1.5px solid black;
-      transition: 0.4s ease-in-out;
-      bottom: 0;
-      overflow: hidden;
-      opacity: 0;
-      bottom: -3px;
-    }
-    &:hover::before {
-      width: 100%;
-      opacity: 1;
-      overflow: visible;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:last-child {
+      margin-top: 50px;
     }
   }
 

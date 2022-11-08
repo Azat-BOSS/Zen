@@ -64,7 +64,7 @@
     @include inputRes();
     width: 100%;
     max-width: 570px;
-    border-bottom: 2px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
     @include FontReq();
     font-size: 15px;
     line-height: 56px;
@@ -111,12 +111,12 @@
       content: "";
       display: block;
       position: absolute;
-      width: 313px;
+      width: 400px;
       height: 71px;
       background-color: rgb(0, 0, 0);
       z-index: -1;
       top: 0;
-      transform: translateX(-320px);
+      transform: translateX(-500px);
       transition: all 0.4s ease-in-out;
     }
 
@@ -143,6 +143,10 @@
     width: 100%;
     max-width: 400px;
     margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
     @media screen and (max-width: 700px){
       margin-top: 15px;
       margin-left: 0;
@@ -162,17 +166,29 @@
 .input-name-error {
   position: absolute;
   left: 130px;
-  top: 45px;
+  top: 50px;
+  @media screen and (max-width: 700px){
+    left: 50px;
+  }
 }
 
 .input-phone-error {
   position: absolute;
-  left: 128px;
-  top: 45px;
-} 
+  left: 130px;
+  top: 50px;
+  @media screen and (max-width: 700px){
+    left: 50px;
+  }
+}
 
 .input-email-error {
   position: absolute;
   left: 130px;
-  top: 45px;
+  top: 50px;
+  @media screen and (max-width: 700px){
+    left: 50px;
+  }
+}
+.body_active {
+  overflow: hidden;
 }

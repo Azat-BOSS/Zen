@@ -1,17 +1,17 @@
 @mixin FontReq {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 @mixin FontMed {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
 }
 
 @mixin FontBold {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -67,7 +67,7 @@
   border: none;
   width: 313px;
   height: 71px;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.02em;

@@ -6,7 +6,15 @@ import {
   zoneMedia,
   config,
   contactForm,
-  formContactButton
+  formContactButton,
+  formContactLink,
+  modalPrivacy,
+  modalPrivacyClose,
+  modalUrl,
+  modalUrlClose,
+  contactButton,
+  contactInputs,
+
 } from "./variables.js";
 import Modal from "../../blocks/modal/modal.js";
 import onEntry from "./animation.js";
@@ -32,6 +40,26 @@ const modal = new Modal(brgModal, "brg-modal_active");
 brgButton.addEventListener("click", modal.addStyle);
 brgModalClose.addEventListener("click", modal.removeStyle);
 
+/* Modal-Privacy*/
+const modalPopupPrivacy = new Modal(modalPrivacy, "modal-privacy_active");
+
+formContactLink.addEventListener("click", modalPopupPrivacy.addStyle)
+modalPrivacyClose.addEventListener("click", modalPopupPrivacy.removeStyle)
+
+/* Modal Url */
+const modalPopupUrl = new Modal(modalUrl, "modal-url_active")
+
+contactButton.addEventListener("click", modalPopupUrl.addStyle)
+contactButton.addEventListener("click", () => {
+  contactInputs.forEach(item => {
+    item.value = ""
+  })
+})
+
+
+
+modalUrlClose.addEventListener("click", modalPopupUrl.removeStyle)
+
 /* Validation on server */
 const formContactValidation = new FormValidator(config, contactForm)
 formContactValidation.resetValidation()
@@ -39,8 +67,13 @@ formContactValidation.resetValidation()
 formContactButton.addEventListener("submit", formContactValidation.enableValidation())
 
 /* Scroll */
-const headerScroll = new Scroll(".header__button", ".contact__title")
-const stagesScroll = new Scroll(".stages__button", ".contact__title")
+const projectSliderLink = document.querySelectorAll(".project-slider__link")
+
+const headerScroll = new Scroll(".header__button", ".contact")
+const stagesScroll = new Scroll(".stages__button", ".contact")
+const projectScroll = new Scroll(".project-slider__link", ".contact", ".project-slider__link")
+const headerContact = new Scroll(".header__link_contact", "footer")
+const headerOrder = new Scroll(".header__link_order", ".contact")
 
 
 

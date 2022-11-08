@@ -8,6 +8,9 @@
     text-decoration: none;
     font-size: 16px;
     transition: opacity 0.4s ease-in-out;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     &:hover {
       opacity: 0.5;
     }
@@ -20,7 +23,6 @@
     align-items: center;
     justify-content: center;
     &:first-child {
-      border-top: 2px solid white;
       border-left: 2px solid white;
       border-right: 2px solid white;
     }
@@ -212,12 +214,12 @@
       content: "";
       display: block;
       position: absolute;
-      width: 313px;
+      width: 400px;
       height: 71px;
       background-color: white;
       z-index: -1;
       top: 0;
-      transform: translateX(-320px);
+      transform: translateX(-500px);
       transition: all 0.4s ease-in-out;
     }
     &:hover::before {
